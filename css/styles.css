@@ -820,7 +820,6 @@ footer ul > li span {
         width: 100%;
         height: calc(100% - 100px);
         padding-top: 120px;
-        clear: both;
         right: 0;
         top: 0;
         position: absolute;

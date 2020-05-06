@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Книжная Лавка</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <div class="upper-menu">
+        <div class="content">
+            <ul>
+                <li><a href="#">Вход</a></li>
+                <li><a href="#">Мой Аккаунт</a></li>
+                <li><a href="#">Статус Заказа</a></li>
+                <li><a href="#">Помощь</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-menu">
+        <div class="navigation">
+             <div class="content">
+                <div class="logo"><img src="images/logo.png" alt="logo"></div>
+                <form class="search">
+                    <label for="search"></label>
+                    <input type="text" id="search">
+                    <button type="submit"><img class="search-icon" src="images/search.png" alt=""><span
+                            id="search-button-text">Поиск</span></button>
+                </form>
+                <div id="cart" class="flex-row">
+                    <div id="cart-left-block" class="flex-column">
+                        <div id="cart-items" class="flex-row"><img src="images/cart.png"
+                                                                   alt="cart"><span>Корзина<span
+                                id="cart-items-number">(2&nbsp;товара)</span></span>
+                        </div>
+                        <div id="cart-checkout" class="flex-row"><span id="cart-sum">1260&#8381; </span>
+                            <button class="checkout-btn">Оформить заказ</button>
+                        </div>
+                    </div>
+                    <div id="wishlist" class="flex-column">
+                        <div class="icon"><img src="images/wishlist.png" alt="wishlist"></div>
+                        <div class="wishlist" data-count="20"><a class="a-style-none" href="#">Избранное</a></div>
+                    </div>
+                </div>
+                <nav id="site-navigation" aria-label="Menu">
+                    <label id="mobile-menu-label" for="toggle-mobile-menu" aria-label="Menu"
+                           onclick="switchLabel()">&#9776;</label>
+                    <input id="toggle-mobile-menu" type="checkbox"/>
+                    <ul id="main-menu">
+                        <li><a href="">Вход</a></li>
+                        <li><a href="">Мой Аккаунт</a></li>
+                        <li><a href="">Статус заказа</a></li>
+                        <li><a href="">Помощь</a></li>
+                        <li><a href="">Корзина</a></li>
+                        <li><a href="">Избранное</a></li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="under-menu">
+        <div class="content">
+            <ul>
+                <li><a href="#">Компьютеры</a></li>
+                <li><a href="#">Еда</a></li>
+                <li><a href="#">Образование</a></li>
+                <li><a href="#">Фантастика</a></li>
+                <li><a href="#">Здоровье</a></li>
+                <li><a href="#">Математика</a></li>
+                <li><a href="#">Медицина</a></li>
+                <li><a href="#">Фотография</a></li>
+                <li><a href="#">Наука</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="content">
+        <div class="banners flex-row">
+            <div class="banner-big">
+                <div class="arrow-left"><a href="#"><img src="images/arrow-right.png" alt="arrow"></a></div>
+                <img src="images/banner-big.jpg" alt="banner">
+                <div class="arrow-right"><a href="#"><img src="images/arrow-right.png" alt="arrow"></a></div>
+            </div>
+            <div class="banner-deal">
+                <a href="#"><img src="images/banner-small.jpg" alt="deal of the month"></a>
+            </div>
+        </div>
+        <div id="main-panel">
+            <div class="sidebar">
+                <h2>Категории</h2>
+                <ul>
+                    <li><span>ВСЕ</span>
+                        <ul>
+                            <li><span>Fiction</span>
+                                <ul>
+                                    <li><span>Детская</span></li>
+                                    <li><span>Научная фантастика</span></li>
+                                    <li><span>Фэнтези</span></li>
+                                    <li><span>Мистика</span></li>
+                                    <li><span>Любовный роман</span></li>
+                                    <li><span>Хоррор</span></li>
+                                    <li><span>Поэзия</span></li>
+                                    <li><span>Религия</span></li>
+                                </ul>
+                            </li>
+                            <li><span>Non - Fiction</span>
+                                <ul>
+                                    <li><span>Кулинария</span></li>
+                                    <li><span>Психология</span></li>
+                                    <li><span>Медицина</span></li>
+                                    <li><span>Искусство</span></li>
+                                    <li><span>Фотография</span></li>
+                                    <li><span>Юриспруденция</span></li>
+                                    <li><span>История</span></li>
+                                    <li><span>Бизнес</span></li>
+                                    <li><span>IT</span></li>
+                                </ul>
+                            </li>
+                            <li><span>Разное</span>
+                                <ul>
+                                    <li><span>Путешествия</span></li>
+                                    <li><span>Спорт</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="products flex-column">
+                <div class="tabs">
+                    <ul>
+                        <li class="active"><a class="a-style-none" href="#">Популярное</a></li>
+                        <li><a class="a-style-none" href="#">Новинки</a></li>
+                        <li><a class="a-style-none" href="#">Секонд хенд</a></li>
+                        <li><a class="a-style-none" href="#">Распродажа</a></li>
+                    </ul>
+                </div>
+                <div class="books-wrapper">
+                    <div class="books">
+                        <div class="book ">
+                            <div class="image sale"><img src="images/books/zuleyha-glaza.jpg" alt="image"></div>
+                            <div class="title">Зулейха открывает глаза</div>
+                            <div class="price">678 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/zamok-broudi.jpg" alt="image"></div>
+                            <div class="title">Замок Броуди</div>
+                            <div class="price">678 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/poslednya-ohota.jpg" alt="image"></div>
+                            <div class="title">Последняя охота</div>
+                            <div class="price">578 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/dni-saveliya.jpg" alt="image"></div>
+                            <div class="title">Дни Савелия</div>
+                            <div class="price">278 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image sale"><img src="images/books/ne-proshaus.jpg" alt="image"></div>
+                            <div class="title">Не прощаюсь</div>
+                            <div class="price">378 &#8381;</div>
+                        </div>
+
+                        <div class="book">
+                            <div class="image"><img src="images/books/100-let-odino4estva.jpg" alt="image"></div>
+                            <div class="title">100 лет одиночества</div>
+                            <div class="price">555 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/garry-kwebert-case-truth.jpg" alt="image"></div>
+                            <div class="title">Правда о деле Гарри Квеберта</div>
+                            <div class="price">678 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/jarenie-pomidori.jpg" alt="image"></div>
+                            <div class="title">Жареные зелёные помидоры...</div>
+                            <div class="price">578 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image sale"><img src="images/books/kogda-rasseyetsya-tuman.jpg" alt="image">
+                            </div>
+                            <div class="title">Когда рассеется туман</div>
+                            <div class="price">278 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/nazovi-menya-svoim-imenem.jpg" alt="image"></div>
+                            <div class="title">Назови меня своим именем</div>
+                            <div class="price">378 &#8381;</div>
+                        </div>
+
+                        <div class="book">
+                            <div class="image"><img src="images/books/poka-te4et-reka.jpg" alt="image"></div>
+                            <div class="title">Пока течет река</div>
+                            <div class="price">555 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/silent-patient.jpg" alt="image"></div>
+                            <div class="title">Безмолвный пациент</div>
+                            <div class="price">678 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/tatu-iz-osvencima.jpg" alt="image"></div>
+                            <div class="title">Татуировщик из Освенцима</div>
+                            <div class="price">578 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/inside-the-killer.jpg" alt="image"></div>
+                            <div class="title">Внутри убийцы</div>
+                            <div class="price">278 &#8381;</div>
+                        </div>
+                        <div class="book">
+                            <div class="image"><img src="images/books/1984.jpg" alt="image"></div>
+                            <div class="title">1984</div>
+                            <div class="price">378 &#8381;</div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <ul>
+                            <li><a class="a-style-none" href="#">1</a></li>
+                            <li><a class="a-style-none" href="#">2</a></li>
+                            <li class="active"><a class="a-style-none" href="#">3</a></li>
+                            <li><a class="a-style-none" href="#">4</a></li>
+                            <li><a class="a-style-none" href="#">5</a></li>
+                            <li><a class="a-style-none" href="#">6</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="content">
+        <div class="row">
+            <div class="footer_social">
+                <ul>
+                    <li><span>Соцсети</span></li>
+                    <li><a class="a-style-none" href=#>Вконтакте</a></li>
+                    <li><a class="a-style-none" href=#>Ютьюб</a></li>
+                    <li><a class="a-style-none" href=#>Инстаграм</a></li>
+                    <li><a class="a-style-none" href=#>Одноклассники</a></li>
+                    <li><a class="a-style-none" href=#>Твиттер</a></li>
+                </ul>
+            </div>
+            <div class="footer_important">
+                <ul>
+                    <li><span>Важно</span></li>
+                    <li><a class="a-style-none" href=#>Акции</a></li>
+                    <li><a class="a-style-none" href=#>Сертификаты</a></li>
+                    <li><a class="a-style-none" href=#>Предзаказы</a></li>
+                    <li><a class="a-style-none" href=#>Только у нас</a></li>
+                    <li><a class="a-style-none" href=#>Книги с афтографом</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer_interesting">
+                <ul>
+                    <li><span>Интересно</span></li>
+                    <li><a class="a-style-none" href=#>Рецензии читателей</a></li>
+                    <li><a class="a-style-none" href=#>Книжные обзоры</a></li>
+                    <li><a class="a-style-none" href=#>Тесты</a></li>
+                    <li><a class="a-style-none" href=#>Новости</a></li>
+                    <li><a class="a-style-none" href=#>Конкурсы</a></li>
+                </ul>
+            </div>
+            <div class="footer_catalog">
+                <ul>
+                    <li><span>Каталог</span></li>
+                    <li><a class="a-style-none" href=#>Все книги</a></li>
+                    <li><a class="a-style-none" href=#>Школа</a></li>
+                    <li><a class="a-style-none" href=#>Журналы</a></li>
+                    <li><a class="a-style-none" href=#>Игрушки</a></li>
+                    <li><a class="a-style-none" href=#>Канцтовары</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+    function switchLabel() {
+        let $label = document.getElementById("mobile-menu-label");
+        let root = document.getElementsByTagName('html')[0];
+        if (document.getElementById("toggle-mobile-menu").checked) {
+            root.classList.remove("no-scroll");
+            $label.innerHTML = "&#9776;";
+        } else {
+            root.classList.add("no-scroll");
+            $label.innerHTML = "&#10006;";
+        }
+    }
+</script>
+</body>
+</html>

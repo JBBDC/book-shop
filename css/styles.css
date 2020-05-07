@@ -755,7 +755,8 @@ footer ul > li span {
         opacity: 0;
         display: block;
         width: 100%;
-        height: 0;
+        max-height: 0;
+        min-height: 0;
         overflow: hidden;
         padding-top: 120px;
         right: 0;
@@ -764,15 +765,16 @@ footer ul > li span {
         background: rgb(235, 235, 235);
         color: #fff;
         z-index: 2;        
-        transition: height 0.5s ease-in-out;
-        -webkit-transition: height 0.5s ease-in-out;
-        -moz-transition: height 0.5s ease-in-out;
-        -o-transition: height 0.5s ease-in-out;
+        transition: max-height 0.25s ease-in-out, min-height 0.25s ease-in-out;
+        -webkit-transition: max-height 0.25s ease-in-out, min-height 0.25s ease-in-out;
+        -moz-transition: max-height 0.25s ease-in-out, min-height 0.25s ease-in-out;
+        -o-transition: max-height 0.25s ease-in-out, min-height 0.25s ease-in-out;
     }
 
      #site-navigation > input:checked + #main-menu {
         opacity: 1;  
-        height: calc(100vh - 120px);
+        max-height: 100vh;
+        min-height: calc(100vh - 120px);
     }
 
     #site-navigation #main-menu li {

@@ -752,8 +752,27 @@ footer ul > li span {
     }
 
     #site-navigation #main-menu {
-        display: none;
-        min-height: 100vh;
+        opacity: 0;
+        display: block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 120px;
+        right: 0;
+        top: 0;
+        position: absolute;
+        background: rgb(235, 235, 235);
+        color: #fff;
+        z-index: 2;        
+        transition: height 0.5s ease-in-out;
+        -webkit-transition: height 0.5s ease-in-out;
+        -moz-transition: height 0.5s ease-in-out;
+        -o-transition: height 0.5s ease-in-out;
+    }
+
+     #site-navigation > input:checked + #main-menu {
+        opacity: 1;  
+        height: calc(100vh - 120px);
     }
 
     #site-navigation #main-menu li {
@@ -815,18 +834,7 @@ footer ul > li span {
         z-index: 3;
     }
 
-    #site-navigation > input:checked + #main-menu {
-        display: block;
-        width: 100%;
-        height: calc(100% - 100px);
-        padding-top: 120px;
-        right: 0;
-        top: 0;
-        position: absolute;
-        background: rgb(235, 235, 235);
-        color: #fff;
-        z-index: 2;
-    }
+   
 
     #site-navigation > input:checked + .hidden-menu {
         display: block;

@@ -777,7 +777,7 @@ footer ul > li span {
 
      #site-navigation > input:checked + #main-menu {
         opacity: 1;  
-        max-height: 100vh;
+        max-height: 100vw;
         min-height: calc(100vh - 120px);
     }
 

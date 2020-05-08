@@ -114,6 +114,10 @@ html {
     background: rgb(235, 235, 235);
 }
 
+.middle-menu li:hover, .middle-menu li:active {
+    background-color: #dbdbdb;
+}
+
 .middle-menu .content {
     flex-direction: row;
     align-items: center;

@@ -5,47 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Книжная Лавка</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="css/hamburger.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="upper-menu">
-        <div class="content">
-            <ul>
-                <li><a href="#">Вход</a></li>
-                <li><a href="#">Мой Аккаунт</a></li>
-                <li><a href="#">Статус Заказа</a></li>
-                <li><a href="#">Помощь</a></li>
-            </ul>
+    <header>
+        <div class="upper-menu">
+            <div class="content">
+                <ul>
+                    <li><a href="#">Вход</a></li>
+                    <li><a href="#">Мой Аккаунт</a></li>
+                    <li><a href="#">Статус Заказа</a></li>
+                    <li><a href="#">Помощь</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="middle-menu">
-        <div class="navigation">
-             <div class="content">
+        <div class="middle-menu">
+            <div class="navigation">
+               <div class="content">
                 <div class="logo"><img src="images/logo.png" alt="logo"></div>
                 <form class="search">
                     <label for="search"></label>
                     <input type="text" id="search">
                     <button type="submit"><img class="search-icon" src="images/search.png" alt=""><span
-                            id="search-button-text">Поиск</span></button>
-                </form>
-                <div id="cart" class="flex-row">
-                    <div id="cart-left-block" class="flex-column">
-                        <div id="cart-items" class="flex-row"><img src="images/cart.png"
-                                                                   alt="cart"><span>Корзина<span
+                        id="search-button-text">Поиск</span></button>
+                    </form>
+                    <div id="cart" class="flex-row">
+                        <div id="cart-left-block" class="flex-column">
+                            <div id="cart-items" class="flex-row"><img src="images/cart.png"
+                             alt="cart"><span>Корзина<span
                                 id="cart-items-number">(2&nbsp;товара)</span></span>
+                            </div>
+                            <div id="cart-checkout" class="flex-row"><span id="cart-sum">1260&#8381; </span>
+                                <button class="checkout-btn">Оформить заказ</button>
+                            </div>
                         </div>
-                        <div id="cart-checkout" class="flex-row"><span id="cart-sum">1260&#8381; </span>
-                            <button class="checkout-btn">Оформить заказ</button>
+                        <div id="wishlist" class="flex-column">
+                            <div class="icon"><img src="images/wishlist.png" alt="wishlist"></div>
+                            <div class="wishlist" data-count="20"><a class="a-style-none" href="#">Избранное</a></div>
                         </div>
                     </div>
-                    <div id="wishlist" class="flex-column">
-                        <div class="icon"><img src="images/wishlist.png" alt="wishlist"></div>
-                        <div class="wishlist" data-count="20"><a class="a-style-none" href="#">Избранное</a></div>
-                    </div>
-                </div>
-                <nav id="site-navigation" aria-label="Menu">
-                    <label id="mobile-menu-label" for="toggle-mobile-menu" aria-label="Menu"
-                           onclick="switchLabel()">&#9776;</label>
+                    <nav id="site-navigation" aria-label="Menu">
+                        <label id="mobile-menu-label" for="toggle-mobile-menu" aria-label="Menu"
+                        onclick="switchLabel()" class="hamburger hamburger--squeeze">
+                          <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </label>
                     <input id="toggle-mobile-menu" type="checkbox"/>
                     <ul id="main-menu">
                         <li><a href="">Вход</a></li>
@@ -288,10 +293,12 @@
         let root = document.getElementsByTagName('html')[0];
         if (document.getElementById("toggle-mobile-menu").checked) {
             root.classList.remove("no-scroll");
-            $label.innerHTML = "&#9776;";
+            $label.classList.remove("is-active");
+           // $label.innerHTML = "&#9776;";
         } else {
             root.classList.add("no-scroll");
-            $label.innerHTML = "&#10006;";
+            $label.classList.add("is-active");
+            // $label.innerHTML = "&#10006;";
         }
     }
 </script>
